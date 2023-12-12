@@ -10,7 +10,7 @@ def home():
 
 @app.route('/apod')
 def apod():
-    response = requests.get(f'https://api.nasa.gov/planetary/apod?api_key={config.NASA_API_KEY}')
+    response = requests.get(f'https://api.nasa.gov/planetary/apod?api_key={config.NASA_API}')
     data = response.json()
     return jsonify(data)
 
